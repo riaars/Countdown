@@ -22,7 +22,7 @@ export class HomeComponent implements AfterViewInit  {
 
   ngAfterViewInit() {
     this.loadFromStorage()
-    this.adjustFontSizes()
+    setTimeout(() => this.adjustFontSizes(), 0);
     window.addEventListener('resize', this.adjustFontSizes.bind(this));
   }
 
@@ -34,15 +34,14 @@ export class HomeComponent implements AfterViewInit  {
     const value = (e.target as HTMLInputElement).value
     if (field === 'name') {
       this.eventName = value
-      setTimeout(() => this.adjustFontSizes(), 0)
-
     } else if (field === 'date') {
       this.eventDate = value
-      setTimeout(() => this.adjustFontSizes(), 0)
+      
       this.startCountdown();
       
     }
     this.saveToStorage()
+    setTimeout(() => this.adjustFontSizes(), 0)
 
   }
 
