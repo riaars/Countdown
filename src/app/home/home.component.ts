@@ -22,7 +22,8 @@ export class HomeComponent implements AfterViewInit  {
 
   ngAfterViewInit() {
     this.loadFromStorage()
-    window.addEventListener('resize', () => this.adjustFontSizes()); 
+    this.adjustFontSizes()
+    window.addEventListener('resize', this.adjustFontSizes.bind(this));
   }
 
   @HostListener('window:resize') onResize() {
