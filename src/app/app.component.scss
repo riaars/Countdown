@@ -1,0 +1,44 @@
+.container {
+  width: 100vw; 
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block;
+  min-width: 250px;
+  margin-right: 8px;
+}
+
+.event-title{
+  color: #72035D;
+  font-weight: bold;
+  font-size: 75px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.counter{
+  font-weight: bold;
+  padding: 20px;
+  font-size: 50px;
+}
+
+.event-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px
+}
