@@ -1,0 +1,10 @@
+<section class="container">
+    <span *ngIf="eventName && eventDate" class="event-title" #titleElement>Time to {{ eventName }} </span>
+    <span *ngIf="timeLeft && eventName" class="counter" #counterElement>{{timeLeft}}</span>
+
+    <form class="event-form">
+      <input type="text" placeholder="Title" (input) = "updateEvent($event, 'name')" [value]="eventName"/>
+      <input type="date" placeholder="Date" (input) = "updateEvent($event, 'date')" [value]="eventDate" />
+    </form>
+
+  </section>
